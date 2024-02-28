@@ -1,0 +1,27 @@
+{
+  "name": "easymodal",
+  "version": "1.0.0",
+  "description": "EasyModal is a lightweight JS library for accessible modals using the `<dialog>` tag. Features automatic bindings, cookie tracking, timed displays, and WCAG compliance for enhanced user engagement and accessibility.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prolific-digital/easymodal.git"
+  },
+  "keywords": [
+    "javascript",
+    "html5",
+    "native",
+    "accessibility",
+    "modal",
+    "easy-to-use"
+  ],
+  "author": "Chris Miller, Jeff Gullett",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/prolific-digital/easymodal/issues"
+  },
+  "homepage": "https://github.com/prolific-digital/easymodal#readme"
+}
