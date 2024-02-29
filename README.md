@@ -1,6 +1,6 @@
-# EasyModal
+# Accessible Modal
 
-EasyModal is a lightweight, accessible modal library designed to enhance user interaction on web applications. Utilizing the native HTML `<dialog>` element, it offers an easy and robust solution for implementing modals with features like automatic action binding, cookie-based user action tracking, customizable cookie durations, and timed modal displays.
+Accessible Modal is a lightweight, accessible modal library designed to enhance user interaction on web applications. Utilizing the native HTML `<dialog>` element, it offers an easy and robust solution for implementing modals with features like automatic action binding, cookie-based user action tracking, customizable cookie durations, and timed modal displays.
 
 ## Features
 
@@ -13,10 +13,10 @@ EasyModal is a lightweight, accessible modal library designed to enhance user in
 
 ## Installation
 
-Include EasyModal in your project by adding the `EasyModal.js` file to your codebase and linking to it within your HTML file:
+Include Accessible Modal in your project by adding the `Accessible Modal.js` file to your codebase and linking to it within your HTML file:
 
 ```html
-<script src="path/to/EasyModal.js"></script>
+<script src="path/to/Accessible Modal.js"></script>
 ```
 
 ## Usage
@@ -78,7 +78,7 @@ Sets the duration for which the user's action on the modal is remembered.
 
 ## Accessibility
 
-EasyModal leverages the `<dialog>` element's inherent accessibility features, such as focus management and semantic structure. It adheres to WCAG guidelines, ensuring that modals are accessible to all users, including those using assistive technologies.
+Accessible Modal leverages the `<dialog>` element's inherent accessibility features, such as focus management and semantic structure. It adheres to WCAG guidelines, ensuring that modals are accessible to all users, including those using assistive technologies.
 
 ## Best Practices
 
@@ -88,8 +88,8 @@ EasyModal leverages the `<dialog>` element's inherent accessibility features, su
 
 ## Contributing
 
-Contributions are welcome! If you have suggestions for improving EasyModal, please open an issue or submit a pull request.
+Contributions are welcome! If you have suggestions for improving Accessible Modal, please open an issue or submit a pull request.
 
 ## License
 
-EasyModal is open-source software licensed under the MIT license.
+Accessible Modal is open-source software licensed under the MIT license.

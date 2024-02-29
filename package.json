@@ -1,15 +1,15 @@
 {
-  "name": "easymodal",
+  "name": "accessible-modal",
   "version": "1.0.0",
-  "description": "EasyModal is a lightweight JS library for accessible modals using the `<dialog>` tag. Features automatic bindings, cookie tracking, timed displays, and WCAG compliance for enhanced user engagement and accessibility.",
+  "description": "Accessible Modal is a lightweight JS library using the native `<dialog>` HTML tag. Features automatic bindings, cookie tracking, timed displays, and WCAG compliance for enhanced user engagement and accessibility.",
   "main": "src/index.js",
   "scripts": {
-    "build": "terser src/index.js -o dist/easymodal.min.js -c -m",
+    "build": "terser src/index.js -o dist/accessible-modal.min.js -c -m",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/prolific-digital/easymodal.git"
+    "url": "git+https://github.com/prolific-digital/accessible-modal.git"
   },
   "keywords": [
     "javascript",
@@ -22,9 +22,9 @@
   "author": "Chris Miller, Jeff Gullett",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/prolific-digital/easymodal/issues"
+    "url": "https://github.com/prolific-digital/accessible-modal/issues"
   },
-  "homepage": "https://github.com/prolific-digital/easymodal#readme",
+  "homepage": "https://github.com/prolific-digital/accessible-modal#readme",
   "devDependencies": {
     "terser": "^5.28.1"
   }
