@@ -1,8 +1,8 @@
 /**
- * Enhanced AccessibleModal class with support for remembering user actions through cookies,
+ * Enhanced BareModal class with support for remembering user actions through cookies,
  * customizable cookie duration, and automatic timed modal display.
  */
-class AccessibleModal {
+class BareModal {
   constructor() {
     // Initialize modals once the DOM is fully loaded.
     document.addEventListener('DOMContentLoaded', () => {

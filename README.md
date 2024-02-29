@@ -1,6 +1,6 @@
-# Accessible Modal
+# Bare Modal
 
-Accessible Modal is a lightweight, accessible modal library designed to enhance user interaction on web applications. Utilizing the native HTML `<dialog>` element, it offers an easy and robust solution for implementing modals with features like automatic action binding, cookie-based user action tracking, customizable cookie durations, and timed modal displays.
+Bare Modal is a lightweight, accessible modal library designed to enhance user interaction on web applications. Utilizing the native HTML `<dialog>` element, it offers an easy and robust solution for implementing modals with features like automatic action binding, cookie-based user action tracking, customizable cookie durations, and timed modal displays.
 
 ## Features
 
@@ -13,10 +13,10 @@ Accessible Modal is a lightweight, accessible modal library designed to enhance 
 
 ## Installation
 
-Include Accessible Modal in your project by adding the `Accessible Modal.js` file to your codebase and linking to it within your HTML file:
+Include Bare Modal in your project by adding the `bare-modal.min.js` file to your codebase and linking to it within your HTML file:
 
 ```html
-<script src="path/to/Accessible Modal.js"></script>
+<script src="path/to/bare-modal.min.js"></script>
 ```
 
 ## Usage
@@ -78,7 +78,7 @@ Sets the duration for which the user's action on the modal is remembered.
 
 ## Accessibility
 
-Accessible Modal leverages the `<dialog>` element's inherent accessibility features, such as focus management and semantic structure. It adheres to WCAG guidelines, ensuring that modals are accessible to all users, including those using assistive technologies.
+Bare Modal leverages the `<dialog>` element's inherent accessibility features, such as focus management and semantic structure. It adheres to WCAG guidelines, ensuring that modals are accessible to all users, including those using assistive technologies.
 
 ## Best Practices
 
@@ -88,8 +88,8 @@ Accessible Modal leverages the `<dialog>` element's inherent accessibility featu
 
 ## Contributing
 
-Contributions are welcome! If you have suggestions for improving Accessible Modal, please open an issue or submit a pull request.
+Contributions are welcome! If you have suggestions for improving Bare Modal, please open an issue or submit a pull request.
 
 ## License
 
-Accessible Modal is open-source software licensed under the MIT license.
+Bare Modal is open-source software licensed under the MIT license.
