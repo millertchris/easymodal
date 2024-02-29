@@ -18,13 +18,8 @@ class EasyModal {
     document.querySelectorAll('[data-modal-trigger]').forEach((trigger) => {
       const modalId = trigger.getAttribute('data-modal-trigger');
       const modal = document.getElementById(modalId);
-      // Check if an action has already been taken for this modal
-      const actionTaken = this.getCookie(`modalAction_${modalId}`);
-      if (!actionTaken) {
-        // Only set up the modal if no action has been recorded
-        trigger.addEventListener('click', () => modal.showModal());
-        this.bindButtonActions(modal, modalId);
-      }
+      trigger.addEventListener('click', () => modal.showModal());
+      this.bindButtonActions(modal, modalId);
     });
   }
 
@@ -38,21 +33,25 @@ class EasyModal {
         '[data-modal-close], [data-modal-accept], [data-modal-cancel]'
       )
       .forEach((button) => {
-        button.addEventListener('click', () => {
-          const actionType = button.dataset.modalClose
-            ? 'close'
-            : button.dataset.modalAccept
-            ? 'accept'
-            : 'cancel';
+        button.addEventListener('click', (event) => {
+          // Determine the action type based on the button clicked
+          let actionType = '';
+          if (event.target.hasAttribute('data-modal-close')) {
+            actionType = 'close';
+          } else if (event.target.hasAttribute('data-modal-accept')) {
+            actionType = 'accept';
+          } else if (event.target.hasAttribute('data-modal-cancel')) {
+            actionType = 'cancel';
+          }
+
           const cookieDuration =
-            modal.getAttribute('data-modal-cookie-expire') || 7; // Default to 7 days
-          // Set a cookie to remember the user's action
+            modal.getAttribute('data-modal-cookie-expire') || 7;
           this.setCookie(
             `modalAction_${modalId}`,
             actionType,
             parseInt(cookieDuration)
           );
-          modal.close(); // Close the modal after recording the action
+          modal.close();
         });
       });
   }
