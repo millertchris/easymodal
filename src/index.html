@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EasyModal Example</title>
+  </head>
+  <body>
+    <h2>EasyModal Examples</h2>
+
+    <button data-modal-trigger="actionModal">Open Action Modal</button>
+
+    <dialog id="actionModal">
+      <p>This modal will remember your action for 7 days.</p>
+      <button data-modal-close>Close</button>
+      <button data-modal-accept>Accept</button>
+      <button data-modal-cancel>Cancel</button>
+    </dialog>
+
+    <button data-modal-trigger="customDurationModal">
+      Open Custom Duration Modal
+    </button>
+
+    <dialog id="customDurationModal" data-modal-cookie-expire="30">
+      <p>Your action on this modal will be remembered for 30 days.</p>
+      <button data-modal-close>Close</button>
+      <button data-modal-accept>Accept</button>
+      <button data-modal-cancel>Cancel</button>
+    </dialog>
+
+    <dialog id="timedModal" data-modal-timed="3">
+      <p>This modal will appear 3 seconds after the page loads.</p>
+      <button data-modal-close>Close</button>
+      <button data-modal-accept>Accept</button>
+      <button data-modal-cancel>Cancel</button>
+    </dialog>
+
+    <script src="../dist/easymodal.min.js"></script>
+    <script>
+      new EasyModal();
+    </script>
+  </body>
+</html>
