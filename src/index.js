@@ -2,13 +2,11 @@
  * Enhanced BareModal class with support for remembering user actions through cookies,
  * customizable cookie duration, and automatic timed modal display.
  */
-class BareModal {
-  constructor() {
-    // Initialize modals once the DOM is fully loaded.
-    document.addEventListener('DOMContentLoaded', () => {
-      this.initModals();
-      this.initTimedModals();
-    });
+export default class BareModal {
+  init() {
+    this.initModals();
+    this.initTimedModals();
+    this.initExternalTriggers();
   }
 
   /**
@@ -18,8 +16,31 @@ class BareModal {
     document.querySelectorAll('[data-modal-trigger]').forEach((trigger) => {
       const modalId = trigger.getAttribute('data-modal-trigger');
       const modal = document.getElementById(modalId);
-      trigger.addEventListener('click', () => modal.showModal());
-      this.bindButtonActions(modal, modalId);
+      trigger.addEventListener('click', () => {
+        modal.showModal();
+        document.body.classList.add('active-modal'); // Add class when modal is shown
+        this.bindButtonActions(modal, modalId);
+      });
+    });
+  }
+
+  /**
+   * Initializes external triggers for modals.
+   * Links inside elements with the 'trigger-modal' class will trigger modals.
+   */
+  initExternalTriggers() {
+    document.querySelectorAll('.trigger-modal a').forEach((link) => {
+      link.addEventListener('click', (event) => {
+        event.preventDefault(); // Prevent default link behavior
+        const modalId = link.getAttribute('href').slice(1); // Assuming the href is like "#modalId"
+        const modal = document.getElementById(modalId);
+        if (modal) {
+          console.log('modal', modal);
+          modal.showModal();
+          document.body.classList.add('active-modal'); // Add class when modal is shown
+          this.bindButtonActions(modal, modalId);
+        }
+      });
     });
   }
 
@@ -52,6 +73,8 @@ class BareModal {
             parseInt(cookieDuration)
           );
           modal.close();
+
+          document.body.classList.remove('active-modal'); // Remove class when modal is closed
         });
       });
   }
@@ -68,6 +91,7 @@ class BareModal {
         setTimeout(() => {
           modal.showModal();
           this.bindButtonActions(modal, modalId);
+          document.body.classList.add('active-modal'); // Add class when modal is shown
         }, delay * 1000); // Convert seconds to milliseconds
       }
     });
